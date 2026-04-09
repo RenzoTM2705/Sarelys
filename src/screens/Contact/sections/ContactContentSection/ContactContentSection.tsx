@@ -152,7 +152,7 @@ export const ContactContentSection = () => {
                     <div className="relative flex h-fit min-w-0 w-full flex-col items-start gap-4 lg:w-1/3 lg:gap-5">
                         <div className="relative flex w-full flex-col items-start gap-5 rounded-xl bg-[#f1eee4] p-5 sm:p-6 lg:p-7">
                             <div className="relative flex w-full flex-col items-start">
-                                <div className="relative mt-[-1.00px] flex items-center self-stretch [font-family:'Noto_Serif-Bold',Helvetica] text-[36px] font-bold leading-10 tracking-[0] text-[#18361c] lg:text-[42px] lg:leading-[46px]">
+                                <div className="relative mt-[-1.00px] flex items-center self-stretch font-serif text-[36px] font-bold leading-10 tracking-[0] text-[#18361c] lg:text-[42px] lg:leading-[46px]">
                                     Boutique y Cocina
                                 </div>
                             </div>
