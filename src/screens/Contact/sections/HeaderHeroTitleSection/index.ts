@@ -1,0 +1,1 @@
+export { HeaderHeroTitleSection } from "./HeaderHeroTitleSection";

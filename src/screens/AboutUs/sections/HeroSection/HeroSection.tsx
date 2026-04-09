@@ -3,11 +3,11 @@ export const HeroSection = () => {
         <section className="w-full px-4 py-16 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
             <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-10 lg:flex-row lg:items-end lg:gap-12">
                 <div className="flex w-full max-w-[624px] flex-col items-start gap-6">
-                    <p className="relative mt-[-1.00px] flex items-center self-stretch [font-family:'Manrope-Medium',Helvetica] text-sm font-medium leading-5 tracking-[4.20px] text-[#715a3f]">
+                    <p className="relative mt-[-1.00px] flex items-center self-stretch text-sm font-medium leading-5 tracking-[4.20px] text-[#715a3f]">
                         LA CASA DE LA REPOSTERIA
                     </p>
 
-                    <div className="relative self-stretch mt-[-1.00px] [font-family:'Noto_Serif-DisplayRegular',Helvetica] text-5xl font-normal leading-[60px] tracking-[0] text-[#18361c] sm:text-6xl sm:leading-[72px] lg:text-8xl lg:leading-[96px]">
+                    <div className="relative self-stretch mt-[-1.00px] font-serif text-5xl font-normal leading-[60px] tracking-[0] text-[#18361c] sm:text-6xl sm:leading-[72px] lg:text-8xl lg:leading-[96px]">
                         El Alma de
                         <br />
                         Sarelys
@@ -15,7 +15,7 @@ export const HeroSection = () => {
 
                     <p className="max-w-xl [font-family:'Manrope-Regular',Helvetica] text-lg font-normal leading-8 tracking-[0] text-[#424841] sm:text-xl sm:leading-[32.5px]">
                         Una exploracion de herencia, ingredientes selectos y el arte de
-                        la reposteria.
+                        la repostería.
                     </p>
                 </div>
 

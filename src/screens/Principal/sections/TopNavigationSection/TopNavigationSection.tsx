@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
-type ActivePage = "principal" | "about";
+type ActivePage = "principal" | "about" | "contact";
 
 interface TopNavigationSectionProps {
     activePage?: ActivePage;
@@ -10,22 +10,16 @@ interface TopNavigationSectionProps {
 type RouteNavLink = {
     type: "route";
     label: string;
-    to: "/" | "/about-us";
+    to: "/" | "/about-us" | "/contact";
     key: ActivePage;
-};
-
-type AnchorNavLink = {
-    type: "anchor";
-    label: string;
-    href: string;
 };
 
 export const TopNavigationSection = ({ activePage = "principal" }: TopNavigationSectionProps) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const navLinks: Array<RouteNavLink | AnchorNavLink> = [
+    const navLinks: Array<RouteNavLink> = [
         { type: "route", label: "PRODUCTOS", to: "/", key: "principal" },
         { type: "route", label: "SOBRE NOSOTROS", to: "/about-us", key: "about" },
-        { type: "anchor", label: "CONTACTO", href: "/#contacto" },
+        { type: "route", label: "CONTACTO", to: "/contact", key: "contact" },
     ];
 
     return (
@@ -100,15 +94,25 @@ export const TopNavigationSection = ({ activePage = "principal" }: TopNavigation
                             }
 
                             return (
-                                <a
+                                <NavLink
                                     key={link.label}
-                                    href={link.href}
-                                    className="inline-flex flex-col items-start no-underline"
+                                    to={link.to}
+                                    className={`inline-flex flex-col items-start no-underline ${
+                                        isActive
+                                            ? "border-b-2 border-[#18361c] pb-1 pt-0 px-0"
+                                            : ""
+                                    }`}
                                 >
-                                    <div className="relative flex items-center h-7 mt-[-1.00px] [font-family:'Noto_Serif-Regular',Helvetica] font-normal text-stone-600 text-base lg:text-lg tracking-[0.45px] leading-7 whitespace-nowrap">
+                                    <div
+                                        className={`relative flex items-center h-7 [font-family:'Noto_Serif-Regular',Helvetica] text-base lg:text-lg tracking-[0.45px] leading-7 whitespace-nowrap ${
+                                            isActive
+                                                ? "mt-[-2.00px] font-bold text-[#18361c]"
+                                                : "mt-[-1.00px] font-normal text-stone-600"
+                                        }`}
+                                    >
                                         {link.label}
                                     </div>
-                                </a>
+                                </NavLink>
                             );
                         })}
                     </nav>
@@ -124,34 +128,21 @@ export const TopNavigationSection = ({ activePage = "principal" }: TopNavigation
                     <div className="mt-3 rounded-xl border border-[#c2c8bf66] bg-[#fcf9ef] p-3 shadow-md md:hidden">
                         <nav className="flex flex-col gap-2">
                             {navLinks.map((link) => {
-                                const isActive = link.type === "route" && link.key === activePage;
-
-                                if (link.type === "route") {
-                                    return (
-                                        <NavLink
-                                            key={link.label}
-                                            to={link.to}
-                                            onClick={() => setIsMenuOpen(false)}
-                                            className={`w-full rounded-lg px-3 py-2 text-left no-underline [font-family:'Noto_Serif-Regular',Helvetica] ${
-                                                isActive
-                                                    ? "bg-[#18361c14] font-bold text-[#18361c]"
-                                                    : "text-stone-700"
-                                            }`}
-                                        >
-                                            {link.label}
-                                        </NavLink>
-                                    );
-                                }
+                                const isActive = link.key === activePage;
 
                                 return (
-                                    <a
+                                    <NavLink
                                         key={link.label}
-                                        href={link.href}
+                                        to={link.to}
                                         onClick={() => setIsMenuOpen(false)}
-                                        className="w-full rounded-lg px-3 py-2 text-left no-underline [font-family:'Noto_Serif-Regular',Helvetica] text-stone-700"
+                                        className={`w-full rounded-lg px-3 py-2 text-left no-underline [font-family:'Noto_Serif-Regular',Helvetica] ${
+                                            isActive
+                                                ? "bg-[#18361c14] font-bold text-[#18361c]"
+                                                : "text-stone-700"
+                                        }`}
                                     >
                                         {link.label}
-                                    </a>
+                                    </NavLink>
                                 );
                             })}
                         </nav>

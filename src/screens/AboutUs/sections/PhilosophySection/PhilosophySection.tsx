@@ -7,7 +7,7 @@ export const PhilosophySection = () => {
             <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center gap-20">
                 <div className="flex w-full max-w-2xl flex-col items-start gap-6">
                     <div className="flex w-full flex-col items-center">
-                        <div className="relative mt-[-1.00px] flex h-12 items-center justify-center [font-family:'Noto_Serif-Regular',Helvetica] text-center text-4xl font-normal leading-[48px] tracking-[0] text-[#18361c] sm:text-5xl">
+                        <div className="relative mt-[-1.00px] flex h-12 items-center justify-center font-serif text-center text-4xl font-normal leading-[48px] tracking-[0] text-[#18361c] sm:text-5xl">
                             Nuestra Filosofia
                         </div>
                     </div>
@@ -26,7 +26,7 @@ export const PhilosophySection = () => {
                         </div>
 
                         <div className="relative flex w-full flex-col items-start px-0 pb-2 pt-0">
-                            <div className="relative mt-[-1.00px] flex items-center self-stretch [font-family:'Noto_Serif-Regular',Helvetica] text-xl font-normal leading-7 tracking-[0] text-white">
+                            <div className="relative mt-[-1.00px] flex items-center self-stretch font-serif text-xl font-normal leading-7 tracking-[0] text-white">
                                 Fermentacion Lenta
                             </div>
                         </div>
@@ -43,7 +43,7 @@ export const PhilosophySection = () => {
                         </div>
 
                         <div className="relative flex w-full flex-col items-start px-0 pb-2 pt-0">
-                            <div className="relative mt-[-1.00px] flex items-center self-stretch [font-family:'Noto_Serif-Regular',Helvetica] text-xl font-normal leading-7 tracking-[0] text-[#18361c]">
+                            <div className="relative mt-[-1.00px] flex items-center self-stretch font-serif text-xl font-normal leading-7 tracking-[0] text-[#18361c]">
                                 Poetica Visual
                             </div>
                         </div>
@@ -56,7 +56,7 @@ export const PhilosophySection = () => {
 
                     <div className="relative flex h-full w-full items-center gap-8 rounded-xl bg-[#f1eee4] p-8 lg:col-[1_/_13] lg:row-[3_/_4] lg:gap-12 lg:p-12">
                         <div className="relative flex w-full flex-col items-start gap-4 lg:max-w-[613.33px]">
-                            <div className="relative mt-[-1.00px] flex items-center self-stretch [font-family:'Noto_Serif-Regular',Helvetica] text-2xl font-normal leading-8 tracking-[0] text-[#18361c]">
+                            <div className="relative mt-[-1.00px] flex items-center self-stretch font-serif text-2xl font-normal leading-8 tracking-[0] text-[#18361c]">
                                 El Mandato Estacional
                             </div>
 
@@ -77,7 +77,7 @@ export const PhilosophySection = () => {
                         <div className="absolute left-0 top-0 h-full w-full bg-[url(/ab6axucdju3q5jvyqkrbghfvwc5ulcddpx0e7bgrfpge-cmroy5y3prydztb4njceolve-mg2-q7coinxqtm-sczbiayyjgrxcjp8dvnc-q43guw-66rj5ubpol5zg7qrlamqkhq7oy7byytmdslpkzxjs5cojyyy701ik0n-zw0j7yrnqai26dgaws-y-rxbhyzw2arzvh9ai-rmnmdnws8ylclcxie9mr6vzthlzgxy95u3i84cnp0uw6dnrjxtj0ikpxrnztrgaptrzqa.png)] bg-cover bg-[50%_50%] opacity-10" />
 
                         <div className="relative flex w-full flex-col items-start gap-4">
-                            <div className="relative mt-[-1.00px] flex items-center self-stretch [font-family:'Noto_Serif-Regular',Helvetica] text-3xl font-normal leading-9 tracking-[0] text-[#18361c]">
+                            <div className="relative mt-[-1.00px] flex items-center self-stretch font-serif text-3xl font-normal leading-9 tracking-[0] text-[#18361c]">
                                 Procedencia del Producto
                             </div>
 
