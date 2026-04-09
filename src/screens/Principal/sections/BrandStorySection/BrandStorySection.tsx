@@ -10,7 +10,7 @@ export const BrandStorySection = () => {
                     </div>
 
                     <div className="flex-col items-start self-stretch w-full flex-[0_0_auto] flex relative">
-                        <p className="relative self-stretch mt-[-1.00px] [font-family:'Noto_Serif-Regular',Helvetica] font-normal text-[#18361c] text-3xl leading-tight sm:text-4xl lg:text-5xl lg:leading-[60px]">
+                        <p className="relative self-stretch mt-[-1.00px] font-serif font-normal text-[#18361c] text-3xl leading-tight sm:text-4xl lg:text-5xl lg:leading-[60px]">
                             Creado con Amor,
                             <br />
                             Refinado por la
@@ -41,7 +41,7 @@ export const BrandStorySection = () => {
                     <div className="flex flex-wrap items-start gap-6 pt-8 pb-0 px-0 relative self-stretch w-full flex-[0_0_auto]">
                         <div className="inline-flex flex-col items-start gap-1 relative flex-[0_0_auto]">
                             <div className="flex flex-col items-start relative self-stretch w-full flex-[0_0_auto]">
-                                <div className="relative flex items-center h-10 mt-[-1.00px] [font-family:'Noto_Serif-Regular',Helvetica] font-normal text-[#715a3f] text-3xl tracking-[0] leading-10 whitespace-nowrap sm:text-4xl">
+                                <div className="relative flex items-center h-10 mt-[-1.00px] font-serif font-normal text-[#715a3f] text-3xl tracking-[0] leading-10 whitespace-nowrap sm:text-4xl">
                                     100%
                                 </div>
                             </div>
@@ -57,7 +57,7 @@ export const BrandStorySection = () => {
 
                         <div className="inline-flex flex-col items-start gap-1 relative flex-[0_0_auto]">
                             <div className="flex flex-col items-start relative self-stretch w-full flex-[0_0_auto]">
-                                <div className="relative flex items-center h-10 mt-[-1.00px] [font-family:'Noto_Serif-Regular',Helvetica] font-normal text-[#715a3f] text-3xl tracking-[0] leading-10 whitespace-nowrap sm:text-4xl">
+                                <div className="relative flex items-center h-10 mt-[-1.00px] font-serif font-normal text-[#715a3f] text-3xl tracking-[0] leading-10 whitespace-nowrap sm:text-4xl">
                                     48h
                                 </div>
                             </div>
@@ -79,7 +79,7 @@ export const BrandStorySection = () => {
                     <div className="mt-6 inline-flex max-w-xs flex-col items-start rounded-2xl border border-solid border-[#e5e2d9] bg-white px-6 py-8 shadow-lg lg:absolute lg:-right-8 lg:-bottom-8 lg:mt-0 lg:px-8">
                         <div className="shadow-[0px_25px_50px_-12px_#00000040] absolute w-full h-full top-0 left-0 bg-[#ffffff01] rounded-2xl" />
 
-                        <p className="relative w-full [font-family:'Noto_Serif-DisplayRegular',Helvetica] font-normal text-[#18361c] text-lg leading-[29.2px]">
+                        <p className="relative w-full font-serif font-normal text-[#18361c] text-lg leading-[29.2px]">
                             &#34;Sarelys no es solo una
                             <br />
                             panadería; es un
