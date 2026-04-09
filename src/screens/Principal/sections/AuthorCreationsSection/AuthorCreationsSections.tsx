@@ -80,7 +80,7 @@ const AuthorCreationsSection = () => {
             <div className="mx-auto flex w-full max-w-7xl flex-col gap-10 lg:gap-16">
                 <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
                     <div className="flex flex-col gap-4">
-                        <div className="flex items-center [font-family:'Noto_Serif-Regular',Helvetica] font-normal text-[#18361c] text-3xl leading-tight sm:text-4xl lg:text-5xl">
+                        <div className="flex items-center font-serif text-[#18361c] text-3xl leading-tight sm:text-4xl lg:text-5xl">
                             Nuestras Creaciones de Autor
                         </div>
 
@@ -116,7 +116,7 @@ const AuthorCreationsSection = () => {
                             </div>
 
                             <div className="pt-4 pb-0 px-0 flex flex-col items-start relative self-stretch w-full flex-[0_0_auto]">
-                                <div className="relative flex items-center self-stretch mt-[-1.00px] [font-family:'Noto_Serif-Regular',Helvetica] font-normal text-[#18361c] text-2xl tracking-[0] leading-8">
+                                <div className="relative flex items-center self-stretch mt-[-1.00px] font-serif font-normal text-[#18361c] text-2xl tracking-[0] leading-8">
                                     {creation.title}
                                 </div>
                             </div>

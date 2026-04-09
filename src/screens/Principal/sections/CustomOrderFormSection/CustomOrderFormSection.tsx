@@ -43,7 +43,7 @@ export const CustomOrderSection = ()=> {
                 {/* Left Column */}
                 <div className="relative flex w-full flex-col items-start gap-8">
                     <div className="flex flex-col items-start relative self-stretch w-full flex-[0_0_auto]">
-                        <h2 className="relative self-stretch mt-[-1.00px] [font-family:'Noto_Serif-Regular',Helvetica] font-normal text-white text-3xl leading-tight sm:text-4xl lg:text-6xl lg:leading-[60px]">
+                        <h2 className="relative self-stretch mt-[-1.00px] font-serif font-normal text-white text-3xl leading-tight sm:text-4xl lg:text-6xl lg:leading-[60px]">
                             Pida su Dulce
                             <br />
                             Personalizado
@@ -99,7 +99,7 @@ export const CustomOrderSection = ()=> {
                     <div className="absolute w-full h-full top-0 left-0 bg-[#ffffff01] rounded-3xl shadow-[0px_25px_50px_-12px_#00000040]" />
 
                     <div className="flex flex-col items-start relative self-stretch w-full flex-[0_0_auto]">
-                        <h3 className="relative flex items-center self-stretch mt-[-1.00px] [font-family:'Noto_Serif-Regular',Helvetica] font-normal text-[#18361c] text-2xl tracking-[0] leading-8">
+                        <h3 className="relative flex items-center self-stretch mt-[-1.00px] font-serif font-normal text-[#18361c] text-2xl tracking-[0] leading-8">
                             Formulario de Consulta
                         </h3>
                     </div>

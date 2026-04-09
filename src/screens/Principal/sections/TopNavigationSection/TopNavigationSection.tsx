@@ -32,7 +32,7 @@ export const TopNavigationSection = ({ activePage = "principal" }: TopNavigation
                             alt="Logo Sarelys"
                             className="h-8 w-8 rounded-full object-cover"
                         />
-                        <div className="relative flex items-center h-8 [font-family:'Noto_Serif-Bold',Helvetica] font-bold text-[#18361c] text-2xl tracking-[0] leading-8 whitespace-nowrap">
+                        <div className="relative flex items-center h-8 font-serif font-bold text-[#18361c] text-2xl tracking-[0] leading-8 whitespace-nowrap">
                             Sarelys
                         </div>
                     </Link>
@@ -60,14 +60,38 @@ export const TopNavigationSection = ({ activePage = "principal" }: TopNavigation
                             alt="Logo Sarelys"
                             className="h-8 w-8 rounded-full object-cover"
                         />
-                        <div className="relative flex items-center h-8 [font-family:'Noto_Serif-Bold',Helvetica] font-bold text-[#18361c] text-2xl tracking-[0] leading-8 whitespace-nowrap">
+                        <div className="relative flex items-center h-8 font-serif font-bold text-[#18361c] text-2xl tracking-[0] leading-8 whitespace-nowrap">
                             Sarelys
                         </div>
                     </Link>
 
                     <nav className="flex items-center gap-6 lg:gap-12">
                         {navLinks.map((link) => {
-                            const isActive = link.key === activePage;
+                            const isActive = link.type === "route" && link.key === activePage;
+
+                            if (link.type === "route") {
+                                return (
+                                    <NavLink
+                                        key={link.label}
+                                        to={link.to}
+                                        className={`inline-flex flex-col items-start no-underline ${
+                                            isActive
+                                                ? "border-b-2 border-[#18361c] pb-1 pt-0 px-0"
+                                                : ""
+                                        }`}
+                                    >
+                                        <div
+                                            className={`relative flex items-center h-7 font-serif text-base lg:text-lg tracking-[0.45px] leading-7 whitespace-nowrap ${
+                                                isActive
+                                                    ? "mt-[-2.00px] font-bold text-[#18361c]"
+                                                    : "mt-[-1.00px] font-normal text-stone-600"
+                                            }`}
+                                        >
+                                            {link.label}
+                                        </div>
+                                    </NavLink>
+                                );
+                            }
 
                             return (
                                 <NavLink

@@ -35,7 +35,7 @@ export const FooterLinksSection = () => {
             <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                 <div className="inline-flex flex-col items-start gap-2">
                     <div className="flex flex-col items-start relative self-stretch w-full flex-[0_0_auto]">
-                        <div className="relative flex items-center w-[68.78px] h-7 mt-[-1.00px] [font-family:'Noto_Serif-Regular',Helvetica] font-normal text-[#18361c] text-xl tracking-[0] leading-7 whitespace-nowrap">
+                        <div className="relative flex items-center w-[68.78px] h-7 mt-[-1.00px] font-serif font-normal text-[#18361c] text-xl tracking-[0] leading-7 whitespace-nowrap">
                             Sarelys
                         </div>
                     </div>
