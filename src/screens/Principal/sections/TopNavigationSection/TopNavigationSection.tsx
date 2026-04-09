@@ -32,7 +32,7 @@ export const TopNavigationSection = ({ activePage = "principal" }: TopNavigation
                             alt="Logo Sarelys"
                             className="h-8 w-8 rounded-full object-cover"
                         />
-                        <div className="relative flex items-center h-8 [font-family:'Noto_Serif-Bold',Helvetica] font-bold text-[#18361c] text-2xl tracking-[0] leading-8 whitespace-nowrap">
+                        <div className="relative flex items-center h-8 font-serif font-bold text-[#18361c] text-2xl tracking-[0] leading-8 whitespace-nowrap">
                             Sarelys
                         </div>
                     </Link>
@@ -60,7 +60,7 @@ export const TopNavigationSection = ({ activePage = "principal" }: TopNavigation
                             alt="Logo Sarelys"
                             className="h-8 w-8 rounded-full object-cover"
                         />
-                        <div className="relative flex items-center h-8 [font-family:'Noto_Serif-Bold',Helvetica] font-bold text-[#18361c] text-2xl tracking-[0] leading-8 whitespace-nowrap">
+                        <div className="relative flex items-center h-8 font-serif font-bold text-[#18361c] text-2xl tracking-[0] leading-8 whitespace-nowrap">
                             Sarelys
                         </div>
                     </Link>
@@ -69,26 +69,40 @@ export const TopNavigationSection = ({ activePage = "principal" }: TopNavigation
                         {navLinks.map((link) => {
                             const isActive = link.key === activePage;
 
-                            return (
-                                <NavLink
-                                    key={link.label}
-                                    to={link.to}
-                                    className={`inline-flex flex-col items-start no-underline ${
-                                        isActive
-                                            ? "border-b-2 border-[#18361c] pb-1 pt-0 px-0"
-                                            : ""
-                                    }`}
-                                >
-                                    <div
-                                        className={`relative flex items-center h-7 [font-family:'Noto_Serif-Regular',Helvetica] text-base lg:text-lg tracking-[0.45px] leading-7 whitespace-nowrap ${
+                            if (link.type === "route") {
+                                return (
+                                    <NavLink
+                                        key={link.label}
+                                        to={link.to}
+                                        className={`inline-flex flex-col items-start no-underline ${
                                             isActive
-                                                ? "mt-[-2.00px] font-bold text-[#18361c]"
-                                                : "mt-[-1.00px] font-normal text-stone-600"
+                                                ? "border-b-2 border-[#18361c] pb-1 pt-0 px-0"
+                                                : ""
                                         }`}
                                     >
+                                        <div
+                                            className={`relative flex items-center h-7 [font-family:'Noto_Serif-Regular',Helvetica] text-base lg:text-lg tracking-[0.45px] leading-7 whitespace-nowrap ${
+                                                isActive
+                                                    ? "mt-[-2.00px] font-bold text-[#18361c]"
+                                                    : "mt-[-1.00px] font-normal text-stone-600"
+                                            }`}
+                                        >
+                                            {link.label}
+                                        </div>
+                                    </NavLink>
+                                );
+                            }
+
+                            return (
+                                <a
+                                    key={link.label}
+                                    href={link.href}
+                                    className="inline-flex flex-col items-start no-underline"
+                                >
+                                    <div className="relative flex items-center h-7 mt-[-1.00px] [font-family:'Noto_Serif-Regular',Helvetica] font-normal text-stone-600 text-base lg:text-lg tracking-[0.45px] leading-7 whitespace-nowrap">
                                         {link.label}
                                     </div>
-                                </NavLink>
+                                </a>
                             );
                         })}
                     </nav>

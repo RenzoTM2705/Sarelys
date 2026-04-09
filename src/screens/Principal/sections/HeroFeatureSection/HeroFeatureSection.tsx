@@ -15,7 +15,7 @@ export const HeroFeatureSection = () => {
                     <h1 className="text-5xl md:text-6xl xl:text-7xl font-serif leading-[0.95]">
                         <span className="text-[#18361c]">El Arte de la</span><br />
                         <span className="text-[#715a3f]">Alquimia</span><br />
-                        <span className="text-[#18361c]">Dulce</span>
+                        <span className="text-[#18361c] italic">Dulce</span>
                     </h1>
 
                     <p className="max-w-xl text-lg md:text-xl text-[#424841] leading-relaxed">
@@ -50,7 +50,7 @@ export const HeroFeatureSection = () => {
                     <div className="relative w-full h-[360px] md:h-[500px] xl:h-[620px] bg-gray-300 rounded-3xl border-[10px] border-white shadow-xl" />
 
                     <div className="absolute bottom-4 left-4 bg-white p-4 rounded-xl shadow-md max-w-xs">
-                        <p className="text-sm text-[#715a3f] italic">
+                        <p className="text-sm text-[#715a3f] italic font-serif">
                             "Un empaque tan exquisito como su contenido."
                         </p>
                     </div>
