@@ -4,8 +4,8 @@ export const OriginsSection = () => {
             <div className="mx-auto grid w-full max-w-screen-xl h-fit gap-16 lg:grid-cols-2 lg:gap-20">
                 <div className="relative order-2 flex h-fit w-full flex-col items-start gap-[31px] self-center lg:order-2">
                     <div className="relative flex w-full flex-col items-start self-stretch border-l-4 border-[#18361c] py-0 pl-8 pr-0 [border-left-style:solid]">
-                        <div className="relative mt-[-4.00px] flex h-10 w-[221.33px] items-center [font-family:'Noto_Serif-Regular',Helvetica] text-4xl font-normal leading-10 tracking-[0] text-[#18361c] whitespace-nowrap">
-                            Los Origenes
+                        <div className="relative mt-[-4.00px] flex h-10 w-[221.33px] items-center font-serif text-4xl leading-10 tracking-[0] text-[#18361c] whitespace-nowrap">
+                            Los Orígenes
                         </div>
                     </div>
 
@@ -32,15 +32,15 @@ export const OriginsSection = () => {
                     </div>
 
                     <div className="absolute -right-6 -top-6 flex h-36 w-36 rotate-[12deg] flex-col items-center justify-center rounded-full bg-[#18361c] p-8 sm:-right-10 sm:-top-10 sm:h-48 sm:w-48">
-                        <div className="relative flex h-5 w-[27.28px] items-center justify-center [font-family:'Noto_Serif-DisplayRegular',Helvetica] text-center text-sm font-normal leading-5 tracking-[0] text-white sm:text-base">
+                        <div className="relative flex h-5 w-[27.28px] items-center justify-center font-serif text-center text-sm font-normal leading-5 tracking-[0] text-white sm:text-base">
                             Est.
                         </div>
 
-                        <div className="relative flex h-5 w-[116.79px] items-center justify-center [font-family:'Noto_Serif-DisplayRegular',Helvetica] text-center text-sm font-normal leading-5 tracking-[0] text-white sm:text-base">
+                        <div className="relative flex h-5 w-[116.79px] items-center justify-center font-serif text-center text-sm font-normal leading-5 tracking-[0] text-white sm:text-base">
                             Mil novecientos
                         </div>
 
-                        <div className="relative flex h-5 w-[100.1px] items-center justify-center [font-family:'Noto_Serif-DisplayRegular',Helvetica] text-center text-sm font-normal leading-5 tracking-[0] text-white sm:text-base">
+                        <div className="relative flex h-5 w-[100.1px] items-center justify-center font-serif text-center text-sm font-normal leading-5 tracking-[0] text-white sm:text-base">
                             Setenta y Dos
                         </div>
                     </div>
