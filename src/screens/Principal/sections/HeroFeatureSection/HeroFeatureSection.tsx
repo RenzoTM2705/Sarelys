@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const HeroFeatureSection = () => {
     return (
         <section className="w-full bg-[#fcf9ef] px-4 py-12 sm:px-6 lg:px-8 lg:py-14 xl:px-12 2xl:px-16">
@@ -36,9 +38,12 @@ export const HeroFeatureSection = () => {
                         </a>
 
                         {/* BOTÓN MENÚ */}
-                        <button className="border-2 border-[#18361c] px-6 py-3 rounded-xl text-[#18361c]">
+                        <Link
+                            to="/menu"
+                            className="border-2 border-[#18361c] px-6 py-3 rounded-xl text-[#18361c] text-center"
+                        >
                             Nuestro Menú
-                        </button>
+                        </Link>
 
                     </div>
                 </div>

@@ -31,7 +31,7 @@ const footerLinks = [
 
 export const FooterLinksSection = () => {
     return (
-        <footer id="contacto" className="mt-12 w-full border-t border-[#c2c8bf1a] bg-[#f1eee4] px-4 py-10 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 lg:mt-16">
+        <footer id="contacto" className="w-full border-t border-[#c2c8bf1a] bg-[#f1eee4] px-4 py-10 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
             <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                 <div className="inline-flex flex-col items-start gap-2">
                     <div className="flex flex-col items-start relative self-stretch w-full flex-[0_0_auto]">

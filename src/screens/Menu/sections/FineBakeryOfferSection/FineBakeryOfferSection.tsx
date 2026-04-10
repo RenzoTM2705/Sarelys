@@ -1,15 +1,9 @@
-import icon2 from "./icon-2.svg";
-import icon from "./icon.svg";
-import image from "./image.svg";
-
 const products = [
     {
         id: 1,
         image: "/croissant.png",
         name: "Croissant de Mantequilla",
-        nameWidth: "w-[285.56px]",
         price: "€3.50",
-        priceWidth: "w-[44.98px]",
         description: (
             <>
                 48 horas de fermentación lenta con mantequilla
@@ -17,17 +11,12 @@ const products = [
                 francesa AOP de alta calidad.
             </>
         ),
-        buttonGap: "gap-2",
-        iconSrc: icon,
-        imageHeight: "h-[373.33px]",
     },
     {
         id: 2,
         image: "/pain-au-chocolat.png",
         name: "Pain au Chocolat",
-        nameWidth: "w-[191.28px]",
         price: "€4.20",
-        priceWidth: "w-[44.94px]",
         description: (
             <>
                 Hojaldre delicado relleno con dos barras de
@@ -35,95 +24,79 @@ const products = [
                 chocolate negro 70% cacao de origen.
             </>
         ),
-        buttonGap: "gap-[7.99px]",
-        iconSrc: image,
-        imageHeight: "h-[373.33px]",
     },
     {
         id: 3,
         image: "/brioche.png",
         name: "Brioche Trenzada",
-        nameWidth: "w-[203.02px]",
         price: "€6.00",
-        priceWidth: "w-[46.78px]",
         description: (
             <>
                 Masa enriquecida con yemas de huevo orgánico y<br />
                 un toque sutil de vainilla de Tahití.
             </>
         ),
-        buttonGap: "gap-[7.99px]",
-        iconSrc: icon2,
-        imageHeight: "h-[373.34px]",
     },
 ];
 
 export const FineBakeryOfferSection = () => {
     return (
-        <div className="flex flex-col items-start px-0 py-20 relative self-stretch w-full flex-[0_0_auto] bg-[#f7f4e9]">
-            <div className="flex flex-col max-w-screen-2xl items-start gap-16 px-8 py-0 relative w-full flex-[0_0_auto]">
-                <div className="flex items-baseline justify-between pt-0 pb-6 px-0 relative self-stretch w-full flex-[0_0_auto] border-b [border-bottom-style:solid] border-[#c2c8bf4c]">
-                    <div className="relative flex items-center w-[235.34px] h-10 mt-[-1.00px] [font-family:'Noto_Serif-Bold',Helvetica] font-bold text-[#18361c] text-4xl tracking-[0] leading-10 whitespace-nowrap">
+        <section className="w-full bg-[#f7f4e9] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+            <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-12">
+                <div className="flex w-full flex-col items-center gap-4 border-b border-[#c2c8bf4c] pb-6 text-center lg:flex-row lg:items-end lg:justify-between lg:text-left">
+                    <div className="font-serif text-3xl font-normal  leading-tight text-[#18361c] sm:text-4xl lg:text-5xl">
                         Bollería Fina
                     </div>
 
-                    <div className="w-[138.84px] h-6 [font-family:'Manrope-Regular',Helvetica] font-normal text-[#715a3f] text-base tracking-[0] leading-6 relative flex items-center whitespace-nowrap">
+                    <div className="font-serif text-base leading-6 text-[#715a3f] sm:text-lg">
                         Crujiente &amp; Dorado
                     </div>
                 </div>
 
-                <div className="grid grid-cols-3 grid-rows-[561.34px] h-fit gap-12">
+                <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3">
                     {products.map((product) => (
                         <div
                             key={product.id}
-                            className="relative w-full h-fit flex flex-col items-start gap-2"
+                            className="relative flex w-full max-w-md flex-col items-start gap-4 justify-self-center"
                         >
-                            <div className="flex flex-col items-start justify-center relative self-stretch w-full flex-[0_0_auto] bg-white rounded-lg overflow-hidden aspect-[1]">
+                            <div className="flex aspect-[4/5] w-full flex-col items-start justify-center overflow-hidden rounded-lg bg-white">
                                 <div
-                                    className={`relative self-stretch w-full ${product.imageHeight} bg-cover bg-[50%_50%]`}
+                                    className="relative h-full w-full bg-cover bg-[50%_50%]"
                                     style={{ backgroundImage: `url(${product.image})` }}
                                 />
                             </div>
 
-                            <div className="pl-0 pr-[0.01px] pt-4 pb-0 flex items-start justify-between relative self-stretch w-full flex-[0_0_auto]">
+                            <div className="flex w-full flex-col gap-2 pt-2 sm:flex-row sm:items-end sm:justify-between">
                                 <div
-                                    className={`relative flex items-center ${product.nameWidth} h-8 mt-[-1.00px] [font-family:'Noto_Serif-Regular',Helvetica] font-normal text-[#1c1c16] text-2xl tracking-[0] leading-8 whitespace-nowrap`}
+                                    className="font-serif text-2xl leading-8 text-[#1c1c16]"
                                 >
                                     {product.name}
                                 </div>
 
                                 <div
-                                    className={`${product.priceWidth} h-6 mt-[-1.00px] [font-family:'Manrope-Bold',Helvetica] font-bold text-[#18361c] text-base tracking-[0] leading-6 relative flex items-center whitespace-nowrap`}
+                                    className="font-serif text-base leading-6 text-[#18361c] sm:text-right"
                                 >
                                     {product.price}
                                 </div>
                             </div>
 
-                            <div className="flex flex-col items-start pt-0 pb-4 px-0 relative self-stretch w-full flex-[0_0_auto]">
-                                <p className="relative self-stretch mt-[-1.00px] [font-family:'Manrope-Regular',Helvetica] font-normal text-[#424841] text-base tracking-[0] leading-6">
+                            <div className="flex w-full flex-col items-start pb-1 pt-0">
+                                <p className="font-sans text-base leading-6 text-[#424841]">
                                     {product.description}
                                 </p>
                             </div>
 
                             <button
-                                className={`all-[unset] box-border ${product.buttonGap} px-6 py-3 bg-[#18361c] rounded-md inline-flex items-center relative flex-[0_0_auto]`}
+                                className="all-[unset] box-border inline-flex items-center rounded-md bg-[#18361c] px-6 py-3"
                             >
-                                <div className="justify-center w-[169.63px] h-5 mt-[-1.00px] [font-family:'Manrope-Regular',Helvetica] font-normal text-white text-sm text-center tracking-[1.40px] leading-5 relative flex items-center whitespace-nowrap">
+                                <div className="font-sans text-sm font-normal leading-5 tracking-[1.40px] text-white">
                                     PEDIR POR WHATSAPP
-                                </div>
-
-                                <div className="inline-flex flex-col items-center relative flex-[0_0_auto]">
-                                    <img
-                                        className="relative w-3 h-3"
-                                        alt="Icon"
-                                        src={product.iconSrc}
-                                    />
                                 </div>
                             </button>
                         </div>
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
