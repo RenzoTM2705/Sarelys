@@ -4,7 +4,7 @@ import { SignaturePastryGallerySection } from "./sections/SignaturePastryGallery
 import { TopNavigationSection } from "../Principal/sections/TopNavigationSection";
 import { SpecialCollectionsFeatureSection } from "./sections/SpecialCollectionsFeatureSection";
 
-export const Contact = () => {
+export const Menu = () => {
     return (
         <div className="min-h-screen w-full overflow-x-hidden bg-[#fcf9ef]">
             <div className="w-full pt-[88px] sm:pt-[96px] lg:pt-[88px]">

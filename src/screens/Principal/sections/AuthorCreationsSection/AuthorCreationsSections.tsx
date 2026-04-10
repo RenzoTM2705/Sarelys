@@ -1,4 +1,5 @@
 // import icon from "./icon.svg";
+import { Link } from "react-router-dom";
 
 const creations = [
     {
@@ -91,21 +92,25 @@ const AuthorCreationsSection = () => {
                     </div>
 
 
-                    <button className="all-[unset] box-border inline-flex items-center gap-2 self-start lg:self-auto">
-                        <div className="relative flex items-center justify-center [font-family:'Manrope-Bold',Helvetica] font-bold text-[#18361c] text-sm text-center leading-6 sm:text-base whitespace-nowrap">
+                    <Link
+                        to="/menu"
+                        className="all-[unset] box-border inline-flex items-center gap-2 self-start lg:self-auto"
+                    >
+                        <div className="relative flex items-center justify-center [font-family:'Manrope-Bold',Helvetica] font-bold text-[#18361c] text-sm text-center leading-6 sm:text-base whitespace-nowrap hover:cursor-pointer">
                             Ver Todas las Colecciones
                         </div>
 
                         <div className="inline-flex flex-col items-center relative flex-[0_0_auto]">
                             {/* <img className="relative w-4 h-3" alt="Icon" src={icon} /> */}
                         </div>
-                    </button>
+                    </Link>
                 </div>
 
                 <div className="grid justify-items-center gap-6 sm:grid-cols-2 xl:grid-cols-3 2xl:gap-8">
                     {creations.map((creation) => (
-                        <div
+                        <Link
                             key={creation.id}
+                            to="/menu"
                             className="relative flex h-full w-full max-w-[24rem] flex-col items-start gap-2 rounded-xl bg-white px-4 pb-8 pt-4 shadow-sm"
                         >
                             <div className="flex aspect-[4/5] w-full flex-col items-start justify-center overflow-hidden rounded-lg">
@@ -126,7 +131,7 @@ const AuthorCreationsSection = () => {
                                     {creation.description}
                                 </p>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

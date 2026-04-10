@@ -1,7 +1,3 @@
-import icon2 from "./icon-2.svg";
-import icon from "./icon.svg";
-import image from "./image.svg";
-
 const products = [
     {
         id: 1,
@@ -17,8 +13,6 @@ const products = [
                 francesa AOP de alta calidad.
             </>
         ),
-        buttonGap: "gap-2",
-        iconSrc: icon,
         imageHeight: "h-[373.33px]",
     },
     {
@@ -35,8 +29,6 @@ const products = [
                 chocolate negro 70% cacao de origen.
             </>
         ),
-        buttonGap: "gap-[7.99px]",
-        iconSrc: image,
         imageHeight: "h-[373.33px]",
     },
     {
@@ -52,8 +44,6 @@ const products = [
                 un toque sutil de vainilla de Tahití.
             </>
         ),
-        buttonGap: "gap-[7.99px]",
-        iconSrc: icon2,
         imageHeight: "h-[373.34px]",
     },
 ];
@@ -106,18 +96,10 @@ export const FineBakeryOfferSection = () => {
                             </div>
 
                             <button
-                                className={`all-[unset] box-border ${product.buttonGap} px-6 py-3 bg-[#18361c] rounded-md inline-flex items-center relative flex-[0_0_auto]`}
+                                className="all-[unset] box-border px-6 py-3 bg-[#18361c] rounded-md inline-flex items-center relative flex-[0_0_auto]"
                             >
                                 <div className="justify-center w-[169.63px] h-5 mt-[-1.00px] [font-family:'Manrope-Regular',Helvetica] font-normal text-white text-sm text-center tracking-[1.40px] leading-5 relative flex items-center whitespace-nowrap">
                                     PEDIR POR WHATSAPP
-                                </div>
-
-                                <div className="inline-flex flex-col items-center relative flex-[0_0_auto]">
-                                    <img
-                                        className="relative w-3 h-3"
-                                        alt="Icon"
-                                        src={product.iconSrc}
-                                    />
                                 </div>
                             </button>
                         </div>
