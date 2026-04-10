@@ -1,0 +1,1 @@
+export {SpecialCollectionsFeatureSection} from "./SpecialCollectionsFeatureSection";
