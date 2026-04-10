@@ -111,7 +111,7 @@ export const TopNavigationSection = ({ activePage = "principal" }: TopNavigation
                                         key={link.label}
                                         to={link.to}
                                         onClick={() => setIsMenuOpen(false)}
-                                        className={`w-full rounded-lg px-3 py-2 text-left no-underline [font-family:'Noto_Serif-Regular',Helvetica] ${
+                                        className={`w-full rounded-lg px-3 py-2 text-left no-underline font-serif ${
                                             isActive
                                                 ? "bg-[#18361c14] font-bold text-[#18361c]"
                                                 : "text-stone-700"
