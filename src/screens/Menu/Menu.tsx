@@ -7,7 +7,7 @@ import { SpecialCollectionsFeatureSection } from "./sections/SpecialCollectionsF
 export const Menu = () => {
     return (
         <div className="min-h-screen w-full overflow-x-hidden bg-[#fcf9ef]">
-            <div className="w-full pt-[88px] sm:pt-[96px] lg:pt-[88px]">
+            <div className="flex min-h-screen w-full flex-col pt-[88px] sm:pt-[96px] lg:pt-[88px]">
                 <TopNavigationSection />
                 <FineBakeryOfferSection />
                 <SignaturePastryGallerySection />
