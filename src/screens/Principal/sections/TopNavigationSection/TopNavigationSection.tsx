@@ -104,7 +104,7 @@ export const TopNavigationSection = ({ activePage = "principal" }: TopNavigation
                                     }`}
                                 >
                                     <div
-                                        className={`relative flex items-center h-7 [font-family:'Noto_Serif-Regular',Helvetica] text-base lg:text-lg tracking-[0.45px] leading-7 whitespace-nowrap ${
+                                        className={`relative flex items-center h-7 font-serif text-base lg:text-lg tracking-[0.45px] leading-7 whitespace-nowrap ${
                                             isActive
                                                 ? "mt-[-2.00px] font-bold text-[#18361c]"
                                                 : "mt-[-1.00px] font-normal text-stone-600"

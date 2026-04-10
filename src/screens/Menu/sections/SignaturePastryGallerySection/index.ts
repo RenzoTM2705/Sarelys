@@ -1,0 +1,1 @@
+export {SignaturePastryGallerySection} from "./SignaturePastryGallerySection";
