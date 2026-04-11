@@ -9,7 +9,7 @@ export const HeaderHeroTitleSection = () => {
                 </div>
 
                 <div className="flex w-full flex-col items-start">
-                    <div className="relative mt-[-1.00px] flex max-w-[900px] items-center self-stretch font-serif text-5xl font-bold leading-[56px] tracking-[0] text-[#18361c] sm:text-6xl sm:leading-[64px] lg:text-[68px] lg:leading-[74px]">
+                    <div className="relative mt-[-1.00px] flex max-w-[900px] items-center self-stretch font-serif text-5xl font-normal leading-[56px] tracking-[0] text-[#18361c] sm:text-6xl sm:leading-[64px] lg:text-[68px] lg:leading-[74px]">
                         Nos encantaría escucharte.
                     </div>
                 </div>
