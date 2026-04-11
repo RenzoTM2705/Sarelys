@@ -75,6 +75,8 @@ const creations = [
     },
 ];
 
+const WHATSAPP_NUMBER = "519XXXXXXXX";
+
 const AuthorCreationsSection = () => {
     return (
         <section className="w-full bg-[#f7f4e9] px-4 py-16 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 lg:py-24">
@@ -108,30 +110,40 @@ const AuthorCreationsSection = () => {
 
                 <div className="grid justify-items-center gap-6 sm:grid-cols-2 xl:grid-cols-3 2xl:gap-8">
                     {creations.map((creation) => (
-                        <Link
+                        <div
                             key={creation.id}
-                            to="/menu"
                             className="relative flex h-full w-full max-w-[24rem] flex-col items-start gap-2 rounded-xl bg-white px-4 pb-8 pt-4 shadow-sm"
                         >
-                            <div className="flex aspect-[4/5] w-full flex-col items-start justify-center overflow-hidden rounded-lg">
-                                <div
-                                    className="relative flex-1 self-stretch w-full grow bg-cover bg-[50%_50%]"
-                                    style={{ backgroundImage: `url(${creation.image})` }}
-                                />
-                            </div>
-
-                            <div className="pt-4 pb-0 px-0 flex flex-col items-start relative self-stretch w-full flex-[0_0_auto]">
-                                <div className="relative flex items-center self-stretch mt-[-1.00px] font-serif font-normal text-[#18361c] text-2xl tracking-[0] leading-8">
-                                    {creation.title}
+                            <Link to="/menu" className="w-full">
+                                <div className="flex aspect-[4/5] w-full flex-col items-start justify-center overflow-hidden rounded-lg">
+                                    <div
+                                        className="relative flex-1 self-stretch w-full grow bg-cover bg-[50%_50%]"
+                                        style={{ backgroundImage: `url(${creation.image})` }}
+                                    />
                                 </div>
-                            </div>
 
-                            <div className="flex flex-col items-start relative self-stretch w-full flex-[0_0_auto]">
-                                <p className="relative self-stretch mt-[-1.00px] [font-family:'Manrope-Regular',Helvetica] font-normal text-[#424841] text-sm tracking-[0] leading-5">
-                                    {creation.description}
-                                </p>
-                            </div>
-                        </Link>
+                                <div className="pt-4 pb-0 px-0 flex flex-col items-start relative self-stretch w-full flex-[0_0_auto]">
+                                    <div className="relative flex items-center self-stretch mt-[-1.00px] font-serif font-normal text-[#18361c] text-2xl tracking-[0] leading-8">
+                                        {creation.title}
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-col items-start relative self-stretch w-full flex-[0_0_auto]">
+                                    <p className="relative self-stretch mt-[-1.00px] [font-family:'Manrope-Regular',Helvetica] font-normal text-[#424841] text-sm tracking-[0] leading-5">
+                                        {creation.description}
+                                    </p>
+                                </div>
+                            </Link>
+
+                            <a
+                                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hola, quiero pedir ${creation.title}`)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-3 inline-flex items-center rounded-md bg-[#18361c] px-5 py-3 [font-family:'Manrope-Bold',Helvetica] text-xs font-bold tracking-[1.20px] text-white hover:bg-[#224928]"
+                            >
+                                PEDIR POR WHATSAPP
+                            </a>
+                        </div>
                     ))}
                 </div>
             </div>
