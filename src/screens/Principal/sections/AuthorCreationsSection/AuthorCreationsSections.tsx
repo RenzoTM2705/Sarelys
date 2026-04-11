@@ -114,7 +114,7 @@ const AuthorCreationsSection = () => {
                             key={creation.id}
                             className="relative flex h-full w-full max-w-[24rem] flex-col items-start gap-2 rounded-xl bg-white px-4 pb-8 pt-4 shadow-sm"
                         >
-                            <Link to="/menu" className="w-full">
+                            <div className="w-full">
                                 <div className="flex aspect-[4/5] w-full flex-col items-start justify-center overflow-hidden rounded-lg">
                                     <div
                                         className="relative flex-1 self-stretch w-full grow bg-cover bg-[50%_50%]"
@@ -133,7 +133,7 @@ const AuthorCreationsSection = () => {
                                         {creation.description}
                                     </p>
                                 </div>
-                            </Link>
+                            </div>
 
                             <a
                                 href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hola, quiero pedir ${creation.title}`)}`}
