@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { buildWhatsAppUrl } from "../../../../utils/whatsapp";
 // import icon2 from "./icon-2.svg";
 // import icon3 from "./icon-3.svg";
 // import icon4 from "./icon-4.svg";
 
-const WHATSAPP_NUMBER = "51977575107";
+const CUSTOM_ORDER_WHATSAPP_URL = buildWhatsAppUrl("Hola, quiero hacer un pedido personalizado");
 
 export const CustomOrderSection = ()=> {
     const [formData, setFormData] = useState({
@@ -81,7 +82,7 @@ export const CustomOrderSection = ()=> {
                     </div>
 
                     <a
-                        href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola, quiero hacer un pedido personalizado")}`}
+                        href={CUSTOM_ORDER_WHATSAPP_URL}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="relative inline-flex w-full items-center justify-center gap-3 overflow-hidden rounded-full bg-[#25d366] px-6 py-5 no-underline sm:w-auto sm:px-10"

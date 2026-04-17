@@ -1,5 +1,5 @@
-import { TopNavigationSection as PrincipalTopNavigationSection } from "../../../Principal/sections/TopNavigationSection";
+import { SiteNavbar } from "../../../../components/layout";
 
 export const TopNavigationSection = () => {
-    return <PrincipalTopNavigationSection activePage="about" />;
+    return <SiteNavbar activePage="about" />;
 };

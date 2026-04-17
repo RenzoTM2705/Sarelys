@@ -1,5 +1,6 @@
 // import icon from "./icon.svg";
 import { Link } from "react-router-dom";
+import { buildWhatsAppUrl } from "../../../../utils/whatsapp";
 
 const creations = [
     {
@@ -75,8 +76,6 @@ const creations = [
     },
 ];
 
-const WHATSAPP_NUMBER = "51977575107";
-
 const AuthorCreationsSection = () => {
     return (
         <section className="w-full bg-[#f7f4e9] px-4 py-16 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 lg:py-24">
@@ -136,7 +135,7 @@ const AuthorCreationsSection = () => {
                             </div>
 
                             <a
-                                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hola, quiero pedir ${creation.title}`)}`}
+                                href={buildWhatsAppUrl(`Hola, quiero pedir ${creation.title}`)}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="mt-3 inline-flex items-center rounded-md bg-[#18361c] px-5 py-3 [font-family:'Manrope-Bold',Helvetica] text-xs font-bold tracking-[1.20px] text-white hover:bg-[#224928]"

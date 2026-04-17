@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import { buildWhatsAppUrl } from "../../../../utils/whatsapp";
 
-const WHATSAPP_NUMBER = "51977575107";
+const HERO_WHATSAPP_URL = buildWhatsAppUrl("Hola, quiero mas informacion");
 
 export const HeroFeatureSection = () => {
     return (
@@ -32,7 +33,7 @@ export const HeroFeatureSection = () => {
 
                         {/* BOTÓN WHATSAPP */}
                         <a
-                            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola, quiero mas informacion")}`}
+                            href={HERO_WHATSAPP_URL}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-[#18361c] text-white px-6 py-3 rounded-xl text-center"
