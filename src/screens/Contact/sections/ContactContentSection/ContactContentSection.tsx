@@ -4,6 +4,7 @@ import icon3 from "./icon-3.svg";
 import icon from "./icon.svg";
 import image from "./image.svg";
 import vector from "./vector.svg";
+import { WHATSAPP_DISPLAY_NUMBER, buildWhatsAppUrl } from "../../../../utils/whatsapp";
 
 const scheduleData = [
     {
@@ -33,7 +34,7 @@ const subjectOptions = [
     "Otro",
 ];
 
-const WHATSAPP_NUMBER = "51977575107";
+const CONTACT_WHATSAPP_URL = buildWhatsAppUrl("Hola, deseo mas informacion sobre sus productos");
 
 export const ContactContentSection = () => {
     const [selectedSubject, setSelectedSubject] = useState(subjectOptions[0]);
@@ -161,7 +162,7 @@ export const ContactContentSection = () => {
 
                             <div className="relative flex w-full flex-col items-start gap-5">
                                 <a
-                                    href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola, deseo mas informacion sobre sus productos")}`}
+                                    href={CONTACT_WHATSAPP_URL}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="relative flex w-full items-center gap-4 rounded-xl bg-[#18361c] p-4"
@@ -183,7 +184,7 @@ export const ContactContentSection = () => {
 
                                         <div className="relative flex w-full flex-col items-start self-stretch">
                                             <div className="relative mt-[-1.00px] flex items-center [font-family:'Manrope-Bold',Helvetica] text-sm font-bold leading-6 tracking-[0] text-white whitespace-nowrap sm:text-lg sm:leading-7">
-                                                WhatsApp: +51 977 575 107
+                                                WhatsApp: {WHATSAPP_DISPLAY_NUMBER}
                                             </div>
                                         </div>
                                     </div>

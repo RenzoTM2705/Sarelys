@@ -1,3 +1,5 @@
+import { buildWhatsAppUrl } from "../../../../utils/whatsapp";
+
 const products = [
     {
         id: 1,
@@ -38,8 +40,6 @@ const products = [
         ),
     },
 ];
-
-const WHATSAPP_NUMBER = "51977575107";
 
 export const FineBakeryOfferSection = () => {
     return (
@@ -89,10 +89,10 @@ export const FineBakeryOfferSection = () => {
                             </div>
 
                             <a
-                                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hola, quiero pedir ${product.name}`)}`}
+                                href={buildWhatsAppUrl(`Hola, quiero pedir ${product.name}`)}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="all-[unset] box-border inline-flex items-center rounded-md bg-[#18361c] px-6 py-3 hover:cursor-pointer"
+                                className="all-[unset] box-border inline-flex items-center rounded-md bg-[#18361c] px-6 py-3 transition-colors duration-200 hover:cursor-pointer hover:bg-[#224928]"
                             >
                                 <div className="font-sans text-sm font-normal leading-5 tracking-[1.40px] text-white">
                                     PEDIR POR WHATSAPP

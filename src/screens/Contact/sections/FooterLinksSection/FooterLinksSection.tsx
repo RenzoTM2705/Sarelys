@@ -1,5 +1,5 @@
-import { FooterLinksSection as PrincipalFooterLinksSection } from "../../../Principal/sections/FooterLinksSection";
+import { SiteFooter } from "../../../../components/layout";
 
 export const FooterLinksSection = () => {
-    return <PrincipalFooterLinksSection />;
+    return <SiteFooter />;
 };

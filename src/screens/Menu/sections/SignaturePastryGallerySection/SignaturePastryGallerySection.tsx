@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "51977575107";
+import { buildWhatsAppUrl } from "../../../../utils/whatsapp";
 
 export const SignaturePastryGallerySection = () => {
     return (
@@ -39,10 +39,10 @@ export const SignaturePastryGallerySection = () => {
                         </div>
 
                         <a
-                                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola, quiero pedir la Tarta de Frambuesa y Pistacho")}`}
+                            href={buildWhatsAppUrl("Hola, quiero pedir la Tarta de Frambuesa y Pistacho")}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="all-[unset] box-border inline-flex items-center justify-center rounded-md bg-[#18361c] px-6 py-3 transition-colors hover:cursor-pointer"
+                                className="all-[unset] box-border inline-flex items-center justify-center rounded-md bg-[#18361c] px-6 py-3 transition-colors duration-200 hover:cursor-pointer hover:bg-[#224928]"
                             >
                                 <div className="font-sans text-sm leading-5 tracking-[1.40px] text-white">
                                     PEDIR POR WHATSAPP
@@ -67,10 +67,10 @@ export const SignaturePastryGallerySection = () => {
                             </p>
 
                             <a
-                                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola, quiero pedir la Caja de Macarrones")}`}
+                                href={buildWhatsAppUrl("Hola, quiero pedir la Caja de Macarrones")}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="all-[unset] box-border inline-flex items-center justify-center rounded-md bg-[#18361c] px-6 py-3 transition-colors hover:cursor-pointer"
+                                className="all-[unset] box-border inline-flex items-center justify-center rounded-md bg-[#18361c] px-6 py-3 transition-colors duration-200 hover:cursor-pointer hover:bg-[#224928]"
                             >
                                 <div className="font-sans text-sm leading-5 tracking-[1.40px] text-white">
                                     PEDIR POR WHATSAPP
