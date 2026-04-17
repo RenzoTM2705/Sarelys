@@ -3,6 +3,8 @@ import { useState } from "react";
 // import icon3 from "./icon-3.svg";
 // import icon4 from "./icon-4.svg";
 
+const WHATSAPP_NUMBER = "51977575107";
+
 export const CustomOrderSection = ()=> {
     const [formData, setFormData] = useState({
         nombre: "",
@@ -79,7 +81,7 @@ export const CustomOrderSection = ()=> {
                     </div>
 
                     <a
-                        href="https://wa.me/message"
+                        href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola, quiero hacer un pedido personalizado")}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="relative inline-flex w-full items-center justify-center gap-3 overflow-hidden rounded-full bg-[#25d366] px-6 py-5 no-underline sm:w-auto sm:px-10"

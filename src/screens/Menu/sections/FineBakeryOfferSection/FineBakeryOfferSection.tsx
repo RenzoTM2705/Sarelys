@@ -39,6 +39,8 @@ const products = [
     },
 ];
 
+const WHATSAPP_NUMBER = "51977575107";
+
 export const FineBakeryOfferSection = () => {
     return (
         <section className="w-full bg-[#f7f4e9] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
@@ -86,13 +88,16 @@ export const FineBakeryOfferSection = () => {
                                 </p>
                             </div>
 
-                            <button
-                                className="all-[unset] box-border inline-flex items-center rounded-md bg-[#18361c] px-6 py-3"
+                            <a
+                                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hola, quiero pedir ${product.name}`)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="all-[unset] box-border inline-flex items-center rounded-md bg-[#18361c] px-6 py-3 hover:cursor-pointer"
                             >
                                 <div className="font-sans text-sm font-normal leading-5 tracking-[1.40px] text-white">
                                     PEDIR POR WHATSAPP
                                 </div>
-                            </button>
+                            </a>
                         </div>
                     ))}
                 </div>
