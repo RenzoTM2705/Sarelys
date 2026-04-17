@@ -75,7 +75,7 @@ const creations = [
     },
 ];
 
-const WHATSAPP_NUMBER = "519XXXXXXXX";
+const WHATSAPP_NUMBER = "51977575107";
 
 const AuthorCreationsSection = () => {
     return (

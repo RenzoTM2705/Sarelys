@@ -1,3 +1,5 @@
+const WHATSAPP_NUMBER = "51977575107";
+
 export const SignaturePastryGallerySection = () => {
     return (
         <section className="w-full bg-[#f7f4e9] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
@@ -36,11 +38,16 @@ export const SignaturePastryGallerySection = () => {
                             </div>
                         </div>
 
-                        <button className="all-[unset] box-border inline-flex items-center justify-center rounded-md bg-[#18361c] px-8 py-4 self-start sm:self-end">
-                            <div className="font-sans text-sm leading-5 tracking-[1.40px] text-white">
+                        <a
+                                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola, quiero pedir la Tarta de Frambuesa y Pistacho")}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="all-[unset] box-border inline-flex items-center justify-center rounded-md bg-[#18361c] px-6 py-3 transition-colors hover:cursor-pointer"
+                            >
+                                <div className="font-sans text-sm leading-5 tracking-[1.40px] text-white">
                                     PEDIR POR WHATSAPP
-                            </div>
-                        </button>
+                                </div>
+                            </a>
                     </div>
 
                     <div className="flex w-full flex-col gap-6 lg:col-span-4">
@@ -50,7 +57,7 @@ export const SignaturePastryGallerySection = () => {
 
                         <div className="flex w-full flex-col items-start gap-4">
                             <div className="font-serif text-2xl leading-8 text-[#18361c] sm:text-3xl">
-                                Caja de Macarons
+                                Caja de Macarrones
                             </div>
 
                             <p className="font-sans text-base leading-6 text-[#424841]">
@@ -59,11 +66,16 @@ export const SignaturePastryGallerySection = () => {
                                 con almendra de proximidad.
                             </p>
 
-                            <button className="all-[unset] box-border inline-flex items-center justify-center border-b border-[#18361c] pb-1 pt-0">
-                                <div className="font-sans text-base leading-6 text-[#18361c]">
-                                    Consultar Sabores
+                            <a
+                                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola, quiero pedir la Caja de Macarrones")}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="all-[unset] box-border inline-flex items-center justify-center rounded-md bg-[#18361c] px-6 py-3 transition-colors hover:cursor-pointer"
+                            >
+                                <div className="font-sans text-sm leading-5 tracking-[1.40px] text-white">
+                                    PEDIR POR WHATSAPP
                                 </div>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>

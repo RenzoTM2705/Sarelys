@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+const WHATSAPP_NUMBER = "51977575107";
+
 export const HeroFeatureSection = () => {
     return (
         <section className="w-full bg-[#fcf9ef] px-4 py-12 sm:px-6 lg:px-8 lg:py-14 xl:px-12 2xl:px-16">
@@ -30,8 +32,9 @@ export const HeroFeatureSection = () => {
 
                         {/* BOTÓN WHATSAPP */}
                         <a
-                            href="https://wa.me/519XXXXXXXX"
+                            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola, quiero mas informacion")}`}
                             target="_blank"
+                            rel="noopener noreferrer"
                             className="bg-[#18361c] text-white px-6 py-3 rounded-xl text-center"
                         >
                             Contactar por WhatsApp

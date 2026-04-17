@@ -33,6 +33,8 @@ const subjectOptions = [
     "Otro",
 ];
 
+const WHATSAPP_NUMBER = "51977575107";
+
 export const ContactContentSection = () => {
     const [selectedSubject, setSelectedSubject] = useState(subjectOptions[0]);
     const [name, setName] = useState("");
@@ -158,7 +160,12 @@ export const ContactContentSection = () => {
                             </div>
 
                             <div className="relative flex w-full flex-col items-start gap-5">
-                                <div className="relative flex w-full items-center gap-4 rounded-xl bg-[#18361c] p-4">
+                                <a
+                                    href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola, deseo mas informacion sobre sus productos")}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="relative flex w-full items-center gap-4 rounded-xl bg-[#18361c] p-4"
+                                >
                                     <div className="absolute left-0 top-0 h-full w-full rounded-xl bg-[#ffffff01] shadow-[0px_2px_4px_-2px_#0000001a,0px_4px_6px_-1px_#0000001a]" />
 
                                     <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-[#ffffff33]">
@@ -176,11 +183,11 @@ export const ContactContentSection = () => {
 
                                         <div className="relative flex w-full flex-col items-start self-stretch">
                                             <div className="relative mt-[-1.00px] flex items-center [font-family:'Manrope-Bold',Helvetica] text-sm font-bold leading-6 tracking-[0] text-white whitespace-nowrap sm:text-lg sm:leading-7">
-                                                WhatsApp: +1 (555) 012-3456
+                                                WhatsApp: +51 977 575 107
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
 
                                 <div className="relative flex w-full items-start gap-4 self-stretch">
                                     <div className="relative flex h-10 w-10 items-center justify-center rounded-full bg-[#e5e2d9]">
