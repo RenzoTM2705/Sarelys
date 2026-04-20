@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import { buildWhatsAppUrl } from "../../../../utils/whatsapp";
-
-const HERO_WHATSAPP_URL = buildWhatsAppUrl("Hola, quiero mas informacion");
+import { WhatsAppButton } from "../../../../components/WhatsAppButton";
 
 export const HeroFeatureSection = () => {
     return (
@@ -18,9 +16,8 @@ export const HeroFeatureSection = () => {
                     </div>
 
                     <h1 className="text-5xl md:text-6xl xl:text-7xl font-serif leading-[0.95]">
-                        <span className="text-[#18361c]">El Arte de la</span><br />
-                        <span className="text-[#715a3f]">Alquimia</span><br />
-                        <span className="text-[#18361c] italic">Dulce</span>
+                        <span className="text-[#18361c]">El Arte de </span><br />
+                        <span className="text-[#715a3f] italic">Sarelys</span>
                     </h1>
 
                     <p className="max-w-xl text-lg md:text-xl text-[#424841] leading-relaxed">
@@ -32,14 +29,12 @@ export const HeroFeatureSection = () => {
                     <div className="flex flex-col sm:flex-row gap-4">
 
                         {/* BOTÓN WHATSAPP */}
-                        <a
-                            href={HERO_WHATSAPP_URL}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        <WhatsAppButton
+                            message="Hola, quiero mas informacion"
                             className="bg-[#18361c] text-white px-6 py-3 rounded-xl text-center"
                         >
                             Contactar por WhatsApp
-                        </a>
+                        </WhatsAppButton>
 
                         {/* BOTÓN MENÚ */}
                         <Link
@@ -56,11 +51,18 @@ export const HeroFeatureSection = () => {
                 <div className="relative w-full xl:max-w-3xl xl:justify-self-end">
                     <div className="absolute inset-0 bg-[#ebe8de] rounded-3xl rotate-[-2deg]" />
 
-                    <div className="relative w-full h-[360px] md:h-[500px] xl:h-[620px] bg-gray-300 rounded-3xl border-[10px] border-white shadow-xl" />
+                    <div className="relative w-full h-[360px] md:h-[500px] xl:h-[620px] overflow-hidden rounded-3xl border-[10px] border-white shadow-xl bg-[#f2efe6]">
+                        <img
+                            src="/torta_cumpleaños.webp"
+                            alt="Torta azul de feliz cumpleaños"
+                            className="h-full w-full object-cover"
+                            loading="eager"
+                        />
+                    </div>
 
                     <div className="absolute bottom-4 left-4 bg-white p-4 rounded-xl shadow-md max-w-xs">
                         <p className="text-sm text-[#715a3f] italic font-serif">
-                            "Un empaque tan exquisito como su contenido."
+                            "Detalles que celebran momentos unicos en cada pedido."
                         </p>
                     </div>
                 </div>

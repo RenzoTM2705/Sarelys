@@ -14,7 +14,7 @@ export const SpecialCollectionsFeatureSection = () => {
 
                 <div className="grid w-full grid-cols-1 gap-6 lg:grid-cols-3 lg:grid-rows-2">
                     <div className="relative min-h-[24rem] w-full overflow-hidden rounded-2xl bg-white lg:col-span-2 lg:row-span-2">
-                        <div className="absolute w-full h-full top-0 left-0 bg-[url(/gifting-box.png)] bg-cover bg-[50%_50%]" />
+                        <div className="absolute w-full h-full top-0 left-0 bg-[url(/torta_cumpleaños.webp)] bg-cover bg-[50%_50%]" />
 
                         <div className="absolute w-full h-full top-0 left-0 bg-[linear-gradient(0deg,rgba(24,54,28,0.8)_0%,rgba(24,54,28,0.2)_50%,rgba(24,54,28,0)_100%)]" />
 
@@ -27,13 +27,13 @@ export const SpecialCollectionsFeatureSection = () => {
 
                             <div className="flex w-full flex-col items-start">
                                 <div className="font-serif text-3xl leading-tight text-white sm:text-4xl">
-                                    Caja Tesoros de Invierno
+                                    Torta Feliz Cumpleanos
                                 </div>
                             </div>
 
                             <div className="flex w-full max-w-md flex-col items-start pt-1 pb-3">
                                 <p className="font-sans text-base leading-6 text-[#ffffffcc]">
-                                    Selección exclusiva diseñada para regalar.
+                                    Diseno personalizado para celebrar los momentos mas especiales.
                                 </p>
                             </div>
 
@@ -46,12 +46,12 @@ export const SpecialCollectionsFeatureSection = () => {
                     </div>
 
                     <div className="relative min-h-[14rem] w-full overflow-hidden rounded-2xl bg-[#e5e2d9] lg:col-start-3 lg:row-start-1">
-                        <div className="absolute w-full h-full top-0 left-0 opacity-80 bg-[url(/morning-set.png)] bg-cover bg-[50%_50%]" />
+                        <div className="absolute w-full h-full top-0 left-0 opacity-90 bg-[url(/postre_2022.webp)] bg-cover bg-[50%_50%]" />
 
                         <div className="absolute left-0 top-0 flex h-full w-full flex-col justify-end p-6 sm:p-8">
                             <div className="flex w-full flex-col items-start">
                                 <div className="font-serif text-xl font-normal leading-7 text-[#18361c] sm:text-2xl">
-                                    Desayuno &#39;Le Matin&#39;
+                                    Especial 2022
                                 </div>
                             </div>
                         </div>

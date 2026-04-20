@@ -1,76 +1,76 @@
 // import icon from "./icon.svg";
 import { Link } from "react-router-dom";
-import { buildWhatsAppUrl } from "../../../../utils/whatsapp";
+import { WhatsAppButton } from "../../../../components/WhatsAppButton";
 
 const creations = [
     {
         id: 1,
-        image: "/the-velvet-macaron.png",
-        title: "El Macarrón Terciopelo",
+        image: "/torta_mascotas.webp",
+        title: "Torta Tematica Mascotas",
         description: (
             <>
-                &#34;Un momento fugaz de dulzura de almendra y<br />
-                delicadas infusiones florales.&#34;
+                &#34;Personalizada para consentir a los amantes de<br />
+                cuatro patas en su dia especial.&#34;
             </>
         ),
     },
     {
         id: 2,
-        image: "/heritage-tart.png",
-        title: "Tarta Herencia",
+        image: "/postres_maracuya.webp",
+        title: "Vasitos de Maracuya",
         description: (
             <>
-                &#34;Bayas de temporada maduradas al sol en una cuna de
+                &#34;Suavidad y frescura tropical en porciones
                 <br />
-                masa quebrada mantecosa y crujiente.&#34;
+                perfectas para compartir.&#34;
             </>
         ),
     },
     {
         id: 3,
-        image: "/midnight-croissant.png",
-        title: "Croissant de Medianoche",
+        image: "/tortas_navidad.webp",
+        title: "Coleccion Navidena",
         description: (
             <>
-                &#34;Capas hojaldradas de masa dorada que ocultan un
+                &#34;Disenos festivos para celebrar con color,
                 <br />
-                corazón de cacao oscuro y rico.&#34;
+                detalle y tradicion.&#34;
             </>
         ),
     },
     {
         id: 4,
-        image: "/the-velvet-macaron.png",
-        title: "Macarrón de Vainilla",
+        image: "/torta_verde_cumpleaños.webp",
+        title: "Torta Jardin Encantado",
         description: (
             <>
-                &#34;Una versión suave y luminosa de nuestra firma
+                &#34;Una propuesta artistica con flores, texturas
                 <br />
-                más delicada.&#34;
+                y tonos naturales.&#34;
             </>
         ),
     },
     {
         id: 5,
-        image: "/heritage-tart.png",
-        title: "Tarta de Temporada",
+        image: "/postres_2022.webp",
+        title: "Mesa Dulce 2022",
         description: (
             <>
-                &#34;Fruta fresca, crema fina y una base crujiente para
+                &#34;Una composicion de postres para eventos
                 <br />
-                acompañar cualquier ocasión.&#34;
+                con presentacion inolvidable.&#34;
             </>
         ),
     },
     {
         id: 6,
-        image: "/midnight-croissant.png",
-        title: "Croissant de Cacao",
+        image: "/torta_cumpleaños.webp",
+        title: "Torta Feliz Cumpleanos",
         description: (
             <>
-                &#34;Hojaldre dorado con un centro intenso y
+                &#34;Elegante, limpia y personalizada para
                 <br />
-                profundo.&#34;
+                homenajear a quien mas quieres.&#34;
             </>
         ),
     },
@@ -134,14 +134,12 @@ const AuthorCreationsSection = () => {
                                 </div>
                             </div>
 
-                            <a
-                                href={buildWhatsAppUrl(`Hola, quiero pedir ${creation.title}`)}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <WhatsAppButton
+                                message={`Hola, quiero pedir ${creation.title}`}
                                 className="mt-3 inline-flex items-center rounded-md bg-[#18361c] px-5 py-3 [font-family:'Manrope-Bold',Helvetica] text-xs font-bold tracking-[1.20px] text-white hover:bg-[#224928]"
                             >
                                 PEDIR POR WHATSAPP
-                            </a>
+                            </WhatsAppButton>
                         </div>
                     ))}
                 </div>

@@ -4,7 +4,8 @@ import icon3 from "./icon-3.svg";
 import icon from "./icon.svg";
 import image from "./image.svg";
 import vector from "./vector.svg";
-import { WHATSAPP_DISPLAY_NUMBER, buildWhatsAppUrl } from "../../../../utils/whatsapp";
+import { WhatsAppButton } from "../../../../components/WhatsAppButton";
+import { WHATSAPP_DISPLAY_NUMBER } from "../../../../utils/whatsapp";
 
 const scheduleData = [
     {
@@ -33,8 +34,6 @@ const subjectOptions = [
     "Reservaciones",
     "Otro",
 ];
-
-const CONTACT_WHATSAPP_URL = buildWhatsAppUrl("Hola, deseo mas informacion sobre sus productos");
 
 export const ContactContentSection = () => {
     const [selectedSubject, setSelectedSubject] = useState(subjectOptions[0]);
@@ -161,10 +160,8 @@ export const ContactContentSection = () => {
                             </div>
 
                             <div className="relative flex w-full flex-col items-start gap-5">
-                                <a
-                                    href={CONTACT_WHATSAPP_URL}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                <WhatsAppButton
+                                    message="Hola, deseo mas informacion sobre sus productos"
                                     className="relative flex w-full items-center gap-4 rounded-xl bg-[#18361c] p-4"
                                 >
                                     <div className="absolute left-0 top-0 h-full w-full rounded-xl bg-[#ffffff01] shadow-[0px_2px_4px_-2px_#0000001a,0px_4px_6px_-1px_#0000001a]" />
@@ -188,7 +185,7 @@ export const ContactContentSection = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </a>
+                                </WhatsAppButton>
 
                                 <div className="relative flex w-full items-start gap-4 self-stretch">
                                     <div className="relative flex h-10 w-10 items-center justify-center rounded-full bg-[#e5e2d9]">

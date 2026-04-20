@@ -1,41 +1,42 @@
-import { buildWhatsAppUrl } from "../../../../utils/whatsapp";
+import { WhatsAppButton } from "../../../../components/WhatsAppButton";
 
 const products = [
     {
         id: 1,
-        image: "/croissant.png",
-        name: "Croissant de Mantequilla",
-        price: "€3.50",
+        image: "/postres_maracuya.webp",
+        name: "Vasitos de Maracuya",
+        price: "Desde €18.00",
         description: (
             <>
-                48 horas de fermentación lenta con mantequilla
+                Postre cremoso con cobertura de maracuya
                 <br />
-                francesa AOP de alta calidad.
+                y semillas naturales para eventos.
             </>
         ),
     },
     {
         id: 2,
-        image: "/pain-au-chocolat.png",
-        name: "Pain au Chocolat",
-        price: "€4.20",
+        image: "/torta_mascotas.webp",
+        name: "Torta Tematica Mascotas",
+        price: "Desde €45.00",
         description: (
             <>
-                Hojaldre delicado relleno con dos barras de
+                Personalizada con figuras en fondant
                 <br />
-                chocolate negro 70% cacao de origen.
+                para celebraciones unicas.
             </>
         ),
     },
     {
         id: 3,
-        image: "/brioche.png",
-        name: "Brioche Trenzada",
-        price: "€6.00",
+        image: "/torta_verde_cumpleaños.webp",
+        name: "Torta Jardin Encantado",
+        price: "Desde €55.00",
         description: (
             <>
-                Masa enriquecida con yemas de huevo orgánico y<br />
-                un toque sutil de vainilla de Tahití.
+                Decoracion floral artesanal con acabado
+                <br />
+                premium para cumpleanos especiales.
             </>
         ),
     },
@@ -51,7 +52,7 @@ export const FineBakeryOfferSection = () => {
                     </div>
 
                     <div className="font-serif text-base leading-6 text-[#715a3f] sm:text-lg">
-                        Crujiente &amp; Dorado
+                        Dulces por Encargo
                     </div>
                 </div>
 
@@ -88,16 +89,14 @@ export const FineBakeryOfferSection = () => {
                                 </p>
                             </div>
 
-                            <a
-                                href={buildWhatsAppUrl(`Hola, quiero pedir ${product.name}`)}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <WhatsAppButton
+                                message={`Hola, quiero pedir ${product.name}`}
                                 className="all-[unset] box-border inline-flex items-center rounded-md bg-[#18361c] px-6 py-3 transition-colors duration-200 hover:cursor-pointer hover:bg-[#224928]"
                             >
                                 <div className="font-sans text-sm font-normal leading-5 tracking-[1.40px] text-white">
                                     PEDIR POR WHATSAPP
                                 </div>
-                            </a>
+                            </WhatsAppButton>
                         </div>
                     ))}
                 </div>
