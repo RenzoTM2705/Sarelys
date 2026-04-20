@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { buildWhatsAppUrl } from "../../utils/whatsapp";
+import { WhatsAppButton } from "../WhatsAppButton";
 
 export type NavPage = "principal" | "about" | "contact";
 
@@ -20,10 +20,38 @@ const NAV_LINKS: RouteNavLink[] = [
     { label: "CONTACTO", to: "/contact", key: "contact" },
 ];
 
-const ORDER_WHATSAPP_URL = buildWhatsAppUrl("Hola, quiero hacer un pedido");
-
 export const SiteNavbar = ({ activePage = "principal" }: SiteNavbarProps) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navRef = useRef<HTMLElement | null>(null);
+    const linkRefs = useRef<Array<HTMLAnchorElement | null>>([]);
+    const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
+
+    const updateIndicator = useCallback(() => {
+        const activeIndex = NAV_LINKS.findIndex((link) => link.key === activePage);
+
+        if (activeIndex < 0) {
+            return;
+        }
+
+        const activeLink = linkRefs.current[activeIndex];
+        const navElement = navRef.current;
+
+        if (!activeLink || !navElement) {
+            return;
+        }
+
+        setIndicatorStyle({
+            left: activeLink.offsetLeft,
+            width: activeLink.offsetWidth,
+        });
+    }, [activePage]);
+
+    useEffect(() => {
+        updateIndicator();
+        window.addEventListener("resize", updateIndicator);
+
+        return () => window.removeEventListener("resize", updateIndicator);
+    }, [updateIndicator]);
 
     return (
         <header className="fixed top-0 inset-x-0 z-50 w-full border-b border-[#c2c8bf26] bg-[#fcf9efcc] backdrop-blur-md backdrop-brightness-100 [-webkit-backdrop-filter:blur(12px)_brightness(100%)]">
@@ -68,7 +96,7 @@ export const SiteNavbar = ({ activePage = "principal" }: SiteNavbarProps) => {
                         </div>
                     </Link>
 
-                    <nav className="flex items-center gap-6 lg:gap-12">
+                    <nav ref={navRef} className="relative flex items-center gap-6 pb-2 lg:gap-12">
                         {NAV_LINKS.map((link) => {
                             const isActive = link.key === activePage;
 
@@ -76,17 +104,16 @@ export const SiteNavbar = ({ activePage = "principal" }: SiteNavbarProps) => {
                                 <NavLink
                                     key={link.label}
                                     to={link.to}
-                                    className={`inline-flex flex-col items-start no-underline ${
-                                        isActive
-                                            ? "border-b-2 border-[#18361c] pb-1 pt-0 px-0"
-                                            : ""
-                                    }`}
+                                    ref={(element) => {
+                                        linkRefs.current[NAV_LINKS.findIndex((item) => item.key === link.key)] = element;
+                                    }}
+                                    className="inline-flex flex-col items-start no-underline"
                                 >
                                     <div
                                         className={`relative flex items-center h-7 font-serif text-base lg:text-lg tracking-[0.45px] leading-7 whitespace-nowrap ${
                                             isActive
-                                                ? "mt-[-2.00px] font-bold text-[#18361c]"
-                                                : "mt-[-1.00px] font-normal text-stone-600"
+                                                ? "font-normal text-[#18361c]"
+                                                : "font-normal text-stone-600"
                                         }`}
                                     >
                                         {link.label}
@@ -94,16 +121,19 @@ export const SiteNavbar = ({ activePage = "principal" }: SiteNavbarProps) => {
                                 </NavLink>
                             );
                         })}
+
+                        <span
+                            className="pointer-events-none absolute bottom-0 h-[2px] rounded-full bg-[#18361c] transition-all duration-300 ease-out"
+                            style={{ left: indicatorStyle.left, width: indicatorStyle.width }}
+                        />
                     </nav>
 
-                    <a
-                        href={ORDER_WHATSAPP_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <WhatsAppButton
+                        message="Hola, quiero hacer un pedido"
                         className="inline-flex flex-col items-center justify-center rounded-lg bg-[#18361c] px-5 py-2 text-sm font-medium text-white no-underline sm:px-6"
                     >
                         Pedir Ahora
-                    </a>
+                    </WhatsAppButton>
                 </div>
 
                 {isMenuOpen && (
@@ -119,7 +149,7 @@ export const SiteNavbar = ({ activePage = "principal" }: SiteNavbarProps) => {
                                         onClick={() => setIsMenuOpen(false)}
                                         className={`w-full rounded-lg px-3 py-2 text-left no-underline font-serif ${
                                             isActive
-                                                ? "bg-[#18361c14] font-bold text-[#18361c]"
+                                                ? "bg-[#18361c14] font-normal text-[#18361c]"
                                                 : "text-stone-700"
                                         }`}
                                     >
@@ -129,14 +159,12 @@ export const SiteNavbar = ({ activePage = "principal" }: SiteNavbarProps) => {
                             })}
                         </nav>
 
-                        <a
-                            href={ORDER_WHATSAPP_URL}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        <WhatsAppButton
+                            message="Hola, quiero hacer un pedido"
                             className="mt-3 inline-flex w-full items-center justify-center rounded-lg bg-[#18361c] px-5 py-2 text-sm font-medium text-white no-underline"
                         >
                             Pedir Ahora
-                        </a>
+                        </WhatsAppButton>
                     </div>
                 )}
             </div>

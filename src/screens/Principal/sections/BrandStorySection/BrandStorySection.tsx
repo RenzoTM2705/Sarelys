@@ -22,18 +22,14 @@ export const BrandStorySection = () => {
                     <div className="flex flex-col items-start gap-[23.38px] pt-[15.25px] pb-0 px-0 relative self-stretch w-full flex-[0_0_auto]">
                         <div className="flex flex-col items-start relative self-stretch w-full flex-[0_0_auto]">
                             <p className="relative self-stretch mt-[-1.00px] [font-family:'Manrope-Regular',Helvetica] font-normal text-[#424841] text-base leading-7 lg:text-lg lg:leading-[29.2px]">
-                                Sarelys comenzó en una pequeña cocina tradicional, impulsada por
-                                la creencia de que el secreto de la pastelería perfecta reside
-                                en el silencio de la madrugada y el ritmo del amasado manual.
+                                Sarelys comenzó como empiezan las mejores cosas: en una cocina familiar.
+                                Entre ingredientes simples y manos que aprendían juntas, nació una pasión por crear algo más que postres: momentos.
                             </p>
                         </div>
 
                         <div className="flex flex-col items-start pt-0 pb-[0.62px] px-0 relative self-stretch w-full flex-[0_0_auto]">
                             <p className="relative self-stretch mt-[-1.00px] [font-family:'Manrope-Regular',Helvetica] font-normal text-[#424841] text-base leading-7 lg:text-lg lg:leading-[29.2px]">
-                                Obtenemos nuestra harina de molinos de piedra locales y nuestra
-                                mantequilla de lecherías tradicionales. Nuestro proceso es
-                                lento, intencional y totalmente artesanal. Cada glaseado se vierte a
-                                mano y cada decoración se coloca con la precisión de un joyero.
+                                Lo que empezó como un gesto de cariño, hoy se transforma en cada creación que hacemos: postres que no solo saben bien, sino que conectan, acompañan y crean momentos.
                             </p>
                         </div>
                     </div>

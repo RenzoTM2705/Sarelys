@@ -9,10 +9,22 @@ export const VisualJourneySection = () => {
                 </div>
 
                 <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-[1.15fr_0.85fr] xl:items-start 2xl:gap-8">
-                    <div className="relative overflow-hidden rounded-2xl shadow-[0px_4px_6px_-4px_#0000001a,0px_10px_15px_-3px_#0000001a] bg-[url(/cake-close-up.png)] bg-cover bg-[50%_50%] min-h-[24rem] lg:min-h-[44rem] xl:min-h-[56rem]" />
+                    <div className="relative h-[26rem] overflow-hidden rounded-2xl shadow-[0px_4px_6px_-4px_#0000001a,0px_10px_15px_-3px_#0000001a] lg:h-[44rem] xl:h-[56rem]">
+                        <img
+                            src="/postres_2022.webp"
+                            alt="Coleccion 2022 de postres"
+                            className="h-full w-full object-cover"
+                        />
+                    </div>
 
                     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 xl:gap-6">
-                        <div className="relative min-h-80 overflow-hidden rounded-2xl shadow-[0px_8px_10px_-6px_#0000001a,0px_20px_25px_-5px_#0000001a] bg-[url(/bakery-details.png)] bg-cover bg-[50%_50%] rotate-[-1.5deg] xl:min-h-[28rem]" />
+                        <div className="relative h-80 overflow-hidden rounded-2xl shadow-[0px_8px_10px_-6px_#0000001a,0px_20px_25px_-5px_#0000001a] rotate-[-1.5deg] xl:h-[28rem]">
+                            <img
+                                src="/tortas_navidad.webp"
+                                alt="Coleccion de tortas navidenas"
+                                className="h-full w-full object-cover"
+                            />
+                        </div>
 
                         <div className="flex items-start justify-start sm:col-span-2 xl:col-span-1">
                             <div className="flex flex-col gap-[15.5px] rounded-2xl bg-[#18361c] p-8 text-white shadow-[0px_8px_10px_-6px_#0000001a,0px_20px_25px_-5px_#0000001a] rotate-[1.5deg]">
@@ -30,9 +42,21 @@ export const VisualJourneySection = () => {
                             </div>
                         </div>
 
-                        <div className="relative min-h-64 overflow-hidden rounded-2xl shadow-[0px_8px_10px_-6px_#0000001a,0px_20px_25px_-5px_#0000001a] bg-[url(/fresh-bread.png)] bg-cover bg-[50%_50%] sm:col-span-2 xl:col-span-1 xl:min-h-[20rem]" />
+                        <div className="relative h-64 overflow-hidden rounded-2xl shadow-[0px_8px_10px_-6px_#0000001a,0px_20px_25px_-5px_#0000001a] sm:col-span-2 xl:col-span-1 xl:h-[20rem]">
+                            <img
+                                src="/torta_verde_cumpleaños.webp"
+                                alt="Torta verde decorada de cumpleanos"
+                                className="h-full w-full object-cover"
+                            />
+                        </div>
 
-                        <div className="relative min-h-[24rem] overflow-hidden rounded-2xl border-8 border-white shadow-[0px_25px_50px_-12px_#00000040] bg-[url(/bakery-details.png)] bg-cover bg-[50%_50%] sm:col-span-2 xl:col-span-1 xl:min-h-[28rem]" />
+                        <div className="relative h-[24rem] overflow-hidden rounded-2xl border-8 border-white shadow-[0px_25px_50px_-12px_#00000040] sm:col-span-2 xl:col-span-1 xl:h-[28rem]">
+                            <img
+                                src="/postre_2022.webp"
+                                alt="Postre tematico 2022"
+                                className="h-full w-full object-cover"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

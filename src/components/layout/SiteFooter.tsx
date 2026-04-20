@@ -20,7 +20,7 @@ export const SiteFooter = () => {
 
                     <div className="flex flex-col items-start relative self-stretch w-full flex-[0_0_auto]">
                         <p className="relative flex items-center max-w-xl mt-[-1.00px] [font-family:'Manrope-Regular',Helvetica] font-normal text-stone-500 text-sm tracking-[-0.35px] leading-5">
-                            © 2024 Sarelys Confección Artesanal. Todos los derechos
+                            © 2026 Sarelys Confección Artesanal. Todos los derechos
                             reservados.
                         </p>
                     </div>

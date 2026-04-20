@@ -1,10 +1,8 @@
 import { useState } from "react";
-import { buildWhatsAppUrl } from "../../../../utils/whatsapp";
+import { WhatsAppButton } from "../../../../components/WhatsAppButton";
 // import icon2 from "./icon-2.svg";
 // import icon3 from "./icon-3.svg";
 // import icon4 from "./icon-4.svg";
-
-const CUSTOM_ORDER_WHATSAPP_URL = buildWhatsAppUrl("Hola, quiero hacer un pedido personalizado");
 
 export const CustomOrderSection = ()=> {
     const [formData, setFormData] = useState({
@@ -81,10 +79,8 @@ export const CustomOrderSection = ()=> {
                         ))}
                     </div>
 
-                    <a
-                        href={CUSTOM_ORDER_WHATSAPP_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <WhatsAppButton
+                        message="Hola, quiero hacer un pedido personalizado"
                         className="relative inline-flex w-full items-center justify-center gap-3 overflow-hidden rounded-full bg-[#25d366] px-6 py-5 no-underline sm:w-auto sm:px-10"
                     >
                         <div className="pointer-events-none absolute inset-0 rounded-full shadow-[0px_25px_50px_-12px_#00000040] bg-[#ffffff01]" />
@@ -94,7 +90,7 @@ export const CustomOrderSection = ()=> {
                         <span className="relative flex items-center justify-center mt-[-1.00px] [font-family:'Manrope-Bold',Helvetica] font-bold text-white text-lg text-center leading-7 whitespace-nowrap sm:text-xl">
                             Mensaje por WhatsApp
                         </span>
-                    </a>
+                    </WhatsAppButton>
                 </div>
 
                 {/* Right Column - Form */}
